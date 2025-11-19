@@ -3,7 +3,7 @@ import { View, StyleSheet, ScrollView } from 'react-native';
 import { Text, Button, Appbar } from 'react-native-paper';
 import { ContentRenderer } from '@components/ContentRenderer';
 import { PrimaryButton } from '@components/Button';
-import { database } from '@db/index';
+import { database } from '@/lib/db/schema';
 
 export const LessonDetailScreen = ({ navigation, route }: any) => {
   const { lessonId } = route.params;

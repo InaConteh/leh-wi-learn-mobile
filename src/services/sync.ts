@@ -1,4 +1,5 @@
-import { database } from '@db/index';
+import { database } from '@/lib/db/schema';
+import { Q } from '@nozbe/watermelondb';
 import { supabase } from './supabase';
 import { useAppStore } from '@store/appStore';
 import { Course, Lesson } from '../types';
@@ -84,7 +85,6 @@ export const syncService = {
   },
 
   async getModulesForCourse(courseId: string) {
-    const { Q } = require('@watermelondb/query');
     const modules = await database.collections
       .get('modules')
       .query(Q.where('course_id', Q.eq(courseId)))
@@ -99,7 +99,6 @@ export const syncService = {
   },
 
   async getLessonsForModule(moduleId: string): Promise<Lesson[]> {
-    const { Q } = require('@watermelondb/query');
     const lessons = await database.collections
       .get('lessons')
       .query(Q.where('module_id', Q.eq(moduleId)))

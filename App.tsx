@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { PaperProvider } from 'react-native-paper';
-import { DatabaseProvider } from '@nozbe/watermelondb/DatabaseProvider';
+import DatabaseProvider from '@nozbe/watermelondb/DatabaseProvider';
 import { RootNavigator } from './src/navigation/RootNavigator';
-import { database } from './src/db/index';
+import { database } from './src/lib/db/schema';
 import { useAppStore } from './src/store/appStore';
 import NetInfo from '@react-native-community/netinfo';
 

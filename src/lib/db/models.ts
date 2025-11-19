@@ -1,12 +1,13 @@
-import { Model } from '@watermelondb/core';
-import { field, relation, readonly, date } from '@watermelondb/decorators';
+import { Model } from '@nozbe/watermelondb';
+import { field, relation, readonly, date } from '@nozbe/watermelondb/decorators';
 
 export class CourseModel extends Model {
   static table = 'courses';
-
-  @field('title') title!: string;
-  @field('slug') slug!: string;
-  @field('meta') meta?: any;
+   @field('title') title!: string;
+   @field('slug') slug!: string;
+   @field('meta') meta?: string; // stringify JSON on write
+   @field('updated_at') updatedAt!: number; // epoch millis
+   @field('deleted') deleted!: boolean;
   @readonly @date('created_at') createdAt!: Date;
 }
 

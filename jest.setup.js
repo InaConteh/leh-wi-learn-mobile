@@ -6,8 +6,11 @@ jest.mock('expo-image-picker', () => ({
   launchImageLibraryAsync: jest.fn(),
 }));
 
-jest.mock('@watermelondb/core', () => ({
+jest.mock('@nozbe/watermelondb', () => ({
   Model: class Model {},
+  Q: {
+    where: () => ({})
+  }
 }));
 
 jest.mock('@supabase/supabase-js', () => ({

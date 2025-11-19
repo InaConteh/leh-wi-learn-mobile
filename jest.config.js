@@ -13,7 +13,7 @@ module.exports = {
     '^@utils/(.*)$': '<rootDir>/src/utils/$1',
   },
   transformIgnorePatterns: [
-    'node_modules/(?!(expo|react-native|@watermelondb|@react-navigation|react-native-paper)/)',
+    'node_modules/(?!(expo|react-native|@nozbe/watermelondb|@react-navigation|react-native-paper)/)',
   ],
   collectCoverageFrom: [
     'src/**/*.{ts,tsx}',
