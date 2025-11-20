@@ -29,8 +29,8 @@
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
+      "@morrowdigital/watermelondb-expo-plugin",
       [
-        "@morrowdigital/watermelondb-expo-plugin",
         "expo-build-properties",
         {
           "android": {
